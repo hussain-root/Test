@@ -1,12 +1,14 @@
-name : Devops lab wokflow 
-on:
- workflow_dispatch: #allows manual trigger from github UI
-jobs:
- echo-steps:
+name: Devops lab workflow
 
- runs-on: ubuntu-latest
- steps:
- -name:first step
- run:echo "this is the first step"
- -name:second step
- run :echo "this is the first step"
+on:
+  workflow_dispatch: # allows manual trigger from GitHub UI
+
+jobs:
+  echo-steps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: echo "this is the first step"
+
+      - name: second step
+        run: echo "this is the second step"
